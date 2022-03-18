@@ -3,6 +3,7 @@ package tddClass;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class KataTest {
 
@@ -80,6 +81,13 @@ public class KataTest {
             System.out.print(number + " ");
             number = number + 2;
         }
+    }
+
+    @Test
+    public void evenOddTest() {
+        Kata number = new Kata();
+        boolean result = number.isEven(100);
+        assertTrue(result);
     }
 
 //    @Test

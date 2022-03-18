@@ -76,6 +76,13 @@ public class Kata {
         }
         return number1 / number2;
     }
+
+    public boolean isEven(int digit) {
+        if(digit%2 == 0) {
+            return true;
+        }
+        return false;
+    }
 }
 
 
