@@ -14,6 +14,5 @@ public class Flipper {
         if(digit == 0) {
             System.out.println(1);
         }
-
     }
 }

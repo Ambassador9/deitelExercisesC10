@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+
 public class KataTest {
 
     @Test
@@ -74,14 +75,14 @@ public class KataTest {
     }
 
 
-    @Test
-    public void whileTest() {
-        int number = 2;
-        while (number <= 100) {
-            System.out.print(number + " ");
-            number = number + 2;
-        }
-    }
+//    @Test
+//    public void whileTest() {
+//        int number = 2;
+//        while (number <= 100) {
+//            System.out.print(number + " ");
+//            number = number + 2;
+//        }
+//    }
 
     @Test
     public void evenOddTest() {

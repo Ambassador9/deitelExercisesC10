@@ -17,11 +17,11 @@ public class Account {
 
     public void withdraw(int amount) {
         if(balance > amount) balance = balance - amount;
-        if(balance < amount) balance = 0;
+        if(balance < amount) {
+            System.out.println("Withdrawal amount exceeded the balance");
+            balance = balance;
+        }
         //balance = balance - amount;
     }
 
-    public int getWithdrawBalance() {
-        return balance;
-    }
 }

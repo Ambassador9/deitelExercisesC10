@@ -5,6 +5,103 @@ public class Exercise2 {
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
 
+    System.out.printf("The character %c has the value %d%n", 'Z', ((int) 'Z'));
+
+
+
+    /* 2.28
+    System.out.print("Enter the radius: ");
+    int radius = in.nextInt();
+    System.out.printf("Diameter is %d%n", 2 * radius);
+    System.out.printf("Circumference is %f%n", 2 * Math.PI * radius);
+    System.out.printf("Area is %f%n", 2 * Math.PI * radius * radius);
+
+     */
+
+    /* 2.27
+    System.out.println("* * * * * * * *");
+    System.out.println(" * * * * * * * *");
+    System.out.println("* * * * * * * *");
+    System.out.println(" * * * * * * * *");
+    System.out.println("* * * * * * * *");
+    System.out.println(" * * * * * * * *");
+    System.out.println("* * * * * * * *");
+    System.out.println(" * * * * * * * *");
+
+     */
+
+
+    /* 2.26
+    System.out.println("Enter first digit: ");
+    int firstDigit = in.nextInt();
+    System.out.println("Enter second digit: ");
+    int secondDigit = in.nextInt();
+    int triple = firstDigit * 3;
+    int doubled = secondDigit * 2;
+    int result = triple % doubled;
+
+    if(result == 0) {
+      System.out.printf("The renainder after division = %d%n", result);
+    }
+
+     */
+
+
+    /* 2.25
+    System.out.println("Enter a digit: ");
+    int digit = in.nextInt();
+    if(digit%3 == 0) {
+      System.out.printf("%d is divisible by 3", digit);
+    }
+
+     */
+
+    /* 2.24
+    System.out.println("Enter first digit: ");
+    int firstDigit = in.nextInt();
+    System.out.println("Enter second digit: ");
+    int secondDigit = in.nextInt();
+    System.out.println("Enter third digit: ");
+    int thirdDigit = in.nextInt();
+    System.out.println("Enter fourth digit: ");
+    int fourthDigit = in.nextInt();
+    System.out.println("Enter fifth digit: ");
+    int fifthDigit = in.nextInt();
+    int minimum = 0;
+    int maximum = 0;
+
+    if(minimum < firstDigit) minimum = firstDigit;
+    if(secondDigit < minimum) minimum = secondDigit;
+    if(thirdDigit < minimum) minimum = thirdDigit;
+    if(fourthDigit < minimum) minimum = fourthDigit;
+    if(fifthDigit < minimum) minimum = fifthDigit;
+
+    if(firstDigit > maximum) maximum = firstDigit;
+    if(secondDigit > maximum) maximum = secondDigit;
+    if(thirdDigit > maximum) maximum = thirdDigit;
+    if(fourthDigit > maximum) maximum = fourthDigit;
+    if(fifthDigit > maximum) maximum = fifthDigit;
+
+    System.out.printf("Minimum number = %d%n", minimum);
+    System.out.printf("Maximum number = %d%n", maximum);
+
+     */
+
+
+    /* 2.18 (not complete)
+    System.out.printf(" ********%n " +
+            "*      *%n *      *%n *      *%n *      *%n *      *%n *      *%n *      *%n" +
+                      " ********");
+    System.out.printf("     ***%n  " +
+                      "*       *%n " +
+                      "*         *%n *         *%n *         *%n *         *%n *         *%n  " +
+                      "*       *%n     " +
+                      "***%n");
+
+     */
+
+
+    /* 2.17
     System.out.print("Enter first integer: ");
     int firstDigit = in.nextInt();
     System.out.print("Enter second integer: ");
@@ -14,119 +111,21 @@ public class Exercise2 {
     System.out.printf("Sum = %d%n", firstDigit + secondDigit + thirdDigit);
     System.out.printf("Average = %d%n", (firstDigit + secondDigit + thirdDigit)/3);
     System.out.printf("Product = %d%n", (firstDigit * secondDigit * thirdDigit));
-    if(firstDigit < secondDigit && firstDigit < thirdDigit){
-      System.out.printf("Minimum digit = %d%n", firstDigit);
-    }
-    if(secondDigit < firstDigit && secondDigit < thirdDigit){
-      System.out.printf("Minimum digit = %d%n", secondDigit);
-    }
-    if(thirdDigit < secondDigit && thirdDigit < firstDigit){
-      System.out.printf("Minimum digit = %d%n", thirdDigit);
-    }
-    if(firstDigit > secondDigit && firstDigit > thirdDigit){
-      System.out.printf("Maximum digit = %d%n", firstDigit);
-    }
-    if(secondDigit > firstDigit && secondDigit > thirdDigit){
-      System.out.printf("Maximum digit = %d%n", secondDigit);
-    }
-    if(thirdDigit > secondDigit && thirdDigit > firstDigit){
-      System.out.printf("Maximum digit = %d%n", thirdDigit);
-    }
 
+    int maximum = 0;
+    int minimum = 0;
+    if(minimum < firstDigit) minimum = firstDigit;
+    if(secondDigit < minimum) minimum = secondDigit;
+    if(thirdDigit < minimum) minimum = thirdDigit;
+    System.out.printf("Minimum digit = %d%n", minimum);
 
-    /* exercise 2.16
-    System.out.print("Enter integer: ");
-    int first = in.nextInt();
-    int firstsqr = first * first;
-    if (first > 100) {
-      System.out.printf("%d > 100%n", first);
-    }
-    if (first == 100) {
-      System.out.printf("%d == 100%n", first);
-    }
-    if (first != 100) {
-      System.out.printf("%d != 100%n", first);
-    }
-    if (first < 100) {
-      System.out.printf("%d < 100%n",  first);
-    }
-    if (firstsqr > 100) {
-      System.out.printf("%d > 100%n", firstsqr);
-    }
-    if (firstsqr == 100) {
-      System.out.printf("%d == 100%n", firstsqr);
-    }
-    if (firstsqr != 100) {
-      System.out.printf("%d != 100%n", firstsqr);
-    }
-    if (firstsqr < 100) {
-      System.out.printf("%d < 100%n", firstsqr);
-    }
-     */
+    if(firstDigit > maximum) maximum = firstDigit;
+    if(secondDigit > maximum) maximum = secondDigit;
+    if(thirdDigit > maximum) maximum = thirdDigit;
+    System.out.printf("Maximum digit = %d%n", maximum);
 
-    /* exercise 2.15
-    System.out.print("Enter first integer: ");
-    int first = in.nextInt();
-    System.out.print("Enter second integer: ");
-    int second = in.nextInt();
-    double firstsqr = Math.pow(first, 2);
-    double secondsqr = Math.pow(second, 2);
-    double sqrsum = firstsqr + secondsqr;
-    double sqrdiff = firstsqr - secondsqr;
-    System.out.println("Square of first integer = " + firstsqr);
-    System.out.println("Square of second integer = " + secondsqr);
-    System.out.println("Sum of square of first and second integer = " + sqrsum);
-    System.out.println("Difference of square of first and second integer = " + sqrdiff);
-    */
-
-    /* exercise 2.14
-    int a,b,c,d;
-    a = 1; b = 2; c = 3; d = 4;
-    System.out.println(a+" "+b+" "+c+" "+d);
-    System.out.print(a + " ");
-    System.out.print(b + " ");
-    System.out.print(c + " ");
-    System.out.print(d);
-    System.out.printf("%n%d %d %d %d", a,b,c,d);
-    */
-
-    /* exercise 2.13
-    int p = 5;
-    System.out.printf("%d%n", p + 2 * 4);
-    System.out.printf("%d", p * 2 + 4);
      */
 
 
-    /* exercise 2.10
-    int x = 5, y = 1;
-    System.out.printf("x = %d%n", x + 5);
-    System.out.printf("Value of %d *%d is %d\n", x, y, (x * y) );
-    System.out.printf("x is %d and y is %d", x, y);
-    System.out.printf("%d is not equal to %d\n", (x + y), (x * y) );
-    */
-
-    /*
-    // exercise 2.8a
-    System.out.print("Enter an integer:");
-
-    // exercise 2.8b
-    int b = 5;
-    int c = 10;
-    int a = b * c;
-    System.out.println("a = " + a);
-
-    // exercise 2.8c
-    // sample payroll calculation
-    System.out.print("Enter pay per hour: ");
-    double pph = in.nextDouble(); //pph stands for pay per hour
-    System.out.print("Enter total hour worked: ");
-    double thw = in.nextDouble(); //thw stands for total hour worked
-    System.out.print("Enter overtime per hour: ");
-    double oh = in.nextDouble(); //oh stands for overtime per hour
-    System.out.print("Enter total overtime hour: ");
-    double toh = in.nextDouble(); //toh stands for total overtime hour
-    double grosspay = (pph * thw) + (oh * toh);
-    System.out.println("Gross pay = " + grosspay);
-     */
   }
 }

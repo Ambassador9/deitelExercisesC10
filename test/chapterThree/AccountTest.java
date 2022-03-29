@@ -1,7 +1,8 @@
-package tddClass;
+package chapterThree;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import tddClass.Account;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -51,7 +52,7 @@ public class AccountTest {
         ucheAccount.withdraw(2000);
         //ucheAccount.withdraw(350);
         //assert
-        assertEquals(2000, ucheAccount.getWithdrawBalance());
+        assertEquals(2000, ucheAccount.getBalance());
     }
 
     @Test
@@ -63,7 +64,7 @@ public class AccountTest {
         ucheAccount.withdraw(2000);
         //ucheAccount.withdraw(350);
         //assert
-        assertEquals(0, ucheAccount.getWithdrawBalance());
+        assertEquals(0, ucheAccount.getBalance());
     }
 
     @Test
@@ -75,6 +76,6 @@ public class AccountTest {
         ucheAccount.withdraw(2000);
         //ucheAccount.withdraw(350);
         //assert
-        assertEquals(0, ucheAccount.getWithdrawBalance());
+        assertEquals(1000, ucheAccount.getBalance());
     }
 }
