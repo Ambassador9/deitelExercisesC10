@@ -55,7 +55,7 @@ public class PetrolPurchase {
         this.percentageDiscount = percentageDiscount;
     }
 
-    public double getPurchaseAmount() {
+//    public double getPurchaseAmount() {
 
-    }
+//    }
 }
