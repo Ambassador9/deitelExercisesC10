@@ -22,6 +22,7 @@ public class TicTacToe {
 
 
 
+        // generating an array of numbers from 1-300
         int[] number = new int[300];
 
         for(int i=0; i<300; i++) {
@@ -32,6 +33,7 @@ public class TicTacToe {
 
 
 
+        // a 12 digit random password generator from an array comprising a-z, A-Z and 0-9.
         char[] password = new char[62];
         char[] passwordUpper = new char[26];
         char[] passwordLower = new char[26];
@@ -39,6 +41,7 @@ public class TicTacToe {
         int a = 0;
         int b = 0;
         int c = 0;
+        int d = 0;
 
         for(char j='A'; j<='Z'; j++) {
             passwordUpper[a] = j;
@@ -55,33 +58,24 @@ public class TicTacToe {
             password[b+a+c] = l;
             c++;
         }
-        System.out.println(passwordUpper[2]);
-        System.out.println(passwordLower[2]);
-        System.out.println(password);
+        for(int counter = 0; counter < 62; counter++) {
+            System.out.print(password[counter] + " ");
+        }
         System.out.println();
 
 
-
-
-//        char[] passwordManual;
-//        password = new char[]{'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-//        'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c',
-//        'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-//        't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
-
-
-//        System.out.println(password[61]);
         SecureRandom rand = new SecureRandom();
-//        char[] storedPassword = new char[12];
+        char[] storedPassword = new char[12];
 
 
         for(int i=0; i<12; i++) {
             int randomDigit = rand.nextInt(62);
-//            storedPassword = password[randomDigit];
+            storedPassword[d] = password[randomDigit];
+            d++;
             System.out.printf("%c", password[randomDigit]);
         }
-
-//        System.out.println(storedPassword);
+        System.out.println();
+        System.out.println(storedPassword);
 
 
 //        // an idea for solving password exercise gotten online.
