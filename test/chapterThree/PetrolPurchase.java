@@ -7,7 +7,7 @@ public class PetrolPurchase {
     private double pricePerLiter;
     private double percentageDiscount;
 
-    public PetrolPurchase(String location, String petrolType, int quantity, double price, double percentageDiscount) {
+    public void petrolPurchase(String location, String petrolType, int quantity, double price, double percentageDiscount) {
         this.location = location;
         this.petrolType = petrolType;
         this.quantity = quantity;
@@ -55,7 +55,8 @@ public class PetrolPurchase {
         this.percentageDiscount = percentageDiscount;
     }
 
-//    public double getPurchaseAmount() {
-
-//    }
+    public double getPurchaseAmount() {
+        double netPurchaseAmount = (quantity * pricePerLiter) - percentageDiscount;
+        return netPurchaseAmount;
+    }
 }

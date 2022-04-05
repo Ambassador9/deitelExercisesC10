@@ -10,7 +10,9 @@ public class RandomNumberArray {
         CreateArray array = new CreateArray();
         array.createArray();
         CreateArray sumAndAverage = new CreateArray();
-        sumAndAverage.sumAndAverageArrayElements();
+        sumAndAverage.sumArrayElements();
+        CreateArray average = new CreateArray();
+        average.averageArrayElements();
         CreateArray maximum = new CreateArray();
         maximum.maximumArrayElement();
     }
