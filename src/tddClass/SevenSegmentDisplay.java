@@ -30,7 +30,7 @@ public class SevenSegmentDisplay {
         return true;
     }
 
-    public String[][] displayZero() {
+    public String[][] getZero() {
         sevenSegmentArray[1][1] = " ";
         sevenSegmentArray[1][2] = " ";
         sevenSegmentArray[2][1] = " ";
@@ -41,7 +41,7 @@ public class SevenSegmentDisplay {
         return sevenSegmentArray;
     }
 
-    public String[][] displayOne() {
+    public String[][] getOne() {
         sevenSegmentArray[0][0] = " ";
         sevenSegmentArray[0][1] = " ";
         sevenSegmentArray[0][2] = " ";
@@ -61,7 +61,7 @@ public class SevenSegmentDisplay {
         return sevenSegmentArray;
     }
 
-    public String[][] displayTwo() {
+    public String[][] getTwo() {
         sevenSegmentArray[1][0] = " ";
         sevenSegmentArray[1][1] = " ";
         sevenSegmentArray[1][2] = " ";
@@ -72,7 +72,7 @@ public class SevenSegmentDisplay {
         return sevenSegmentArray;
     }
 
-    public String[][] displayThree() {
+    public String[][] getThree() {
         sevenSegmentArray[1][0] = " ";
         sevenSegmentArray[1][1] = " ";
         sevenSegmentArray[1][2] = " ";
@@ -83,7 +83,7 @@ public class SevenSegmentDisplay {
         return sevenSegmentArray;
     }
 
-    public String[][] displayFour() {
+    public String[][] getFour() {
         sevenSegmentArray[0][1] = " ";
         sevenSegmentArray[0][2] = " ";
         sevenSegmentArray[1][1] = " ";
@@ -98,7 +98,7 @@ public class SevenSegmentDisplay {
         return sevenSegmentArray;
     }
 
-    public String[][] displayFive() {
+    public String[][] getFive() {
         sevenSegmentArray[1][1] = " ";
         sevenSegmentArray[1][2] = " ";
         sevenSegmentArray[1][3] = " ";
@@ -109,7 +109,7 @@ public class SevenSegmentDisplay {
         return sevenSegmentArray;
     }
 
-    public String[][] displaySix() {
+    public String[][] getSix() {
         sevenSegmentArray[1][1] = " ";
         sevenSegmentArray[1][2] = " ";
         sevenSegmentArray[1][3] = " ";
@@ -119,7 +119,7 @@ public class SevenSegmentDisplay {
         return sevenSegmentArray;
     }
 
-    public String[][] displaySeven() {
+    public String[][] getSeven() {
         sevenSegmentArray[1][0] = " ";
         sevenSegmentArray[1][1] = " ";
         sevenSegmentArray[1][2] = " ";
@@ -136,7 +136,7 @@ public class SevenSegmentDisplay {
         return sevenSegmentArray;
     }
 
-    public String[][] displayEight() {
+    public String[][] getEight() {
         sevenSegmentArray[1][1] = " ";
         sevenSegmentArray[1][2] = " ";
         sevenSegmentArray[3][1] = " ";
@@ -145,7 +145,7 @@ public class SevenSegmentDisplay {
         return sevenSegmentArray;
     }
 
-    public String[][] displayNine() {
+    public String[][] getNine() {
         sevenSegmentArray[1][1] = " ";
         sevenSegmentArray[1][2] = " ";
         sevenSegmentArray[3][0] = " ";
@@ -158,43 +158,43 @@ public class SevenSegmentDisplay {
     public void setScreen(String pins) {
         for(int i = 0; i < pins.length(); i++) {
             if(pins == "11111101") {
-                displayZero();
+                getZero();
                 break;
             } else {
                 if(pins == "01100001") {
-                    displayOne();
+                    getOne();
                     break;
                 } else {
                     if(pins == "11011011") {
-                        displayTwo();
+                        getTwo();
                         break;
                     } else {
                         if(pins == "11110011") {
-                            displayThree();
+                            getThree();
                             break;
                         } else {
                             if(pins == "01100111") {
-                                displayFour();
+                                getFour();
                                 break;
                             } else {
                                 if(pins == "10110111") {
-                                    displayFive();
+                                    getFive();
                                     break;
                                 } else {
                                     if(pins == "10111111") {
-                                        displaySix();
+                                        getSix();
                                         break;
                                     } else {
                                         if(pins == "11100001") {
-                                            displaySeven();
+                                            getSeven();
                                             break;
                                         } else {
                                             if(pins == "11111111") {
-                                                displayEight();
+                                                getEight();
                                                 break;
                                             } else {
                                                 if(pins == "11110111") {
-                                                    displayNine();
+                                                    getNine();
                                                     break;
                                                 } else {
                                                     turnOn(0);
@@ -211,7 +211,7 @@ public class SevenSegmentDisplay {
         }
     }
 
-    public String[][] displayScreen() {
+    public String[][] display() {
         for(int i = 0; i < 5; i++) {
             for(int j = 0; j < 4; j++) {
                 System.out.print(sevenSegmentArray[i][j] + " ");

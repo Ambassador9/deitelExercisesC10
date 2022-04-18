@@ -25,7 +25,7 @@ public class SevenSegmentDisplayTest {
 
     @Test
     public void sevenSegmentDisplay_zeroTest() {
-        String[][] result = sevenSegmentDisplay.displayZero();
+        String[][] result = sevenSegmentDisplay.getZero();
         assertArrayEquals(new String[][]{{"#", "#", "#", "#"},
                 {"#", " ", " ", "#"},
                 {"#", " ", " ", "#"},
@@ -35,7 +35,7 @@ public class SevenSegmentDisplayTest {
 
     @Test
     public void sevenSegmentDisplay_oneTest() {
-        String[][] result = sevenSegmentDisplay.displayOne();
+        String[][] result = sevenSegmentDisplay.getOne();
         assertArrayEquals(new String[][]{{" ", " ", " ", "#"},
                 {" ", " ", " ", "#"},
                 {" ", " ", " ", "#"},
@@ -45,7 +45,7 @@ public class SevenSegmentDisplayTest {
 
     @Test
     public void sevenSegmentDisplay_twoTest() {
-        String[][] result = sevenSegmentDisplay.displayTwo();
+        String[][] result = sevenSegmentDisplay.getTwo();
         assertArrayEquals(new String[][]{{"#", "#", "#", "#"},
                 {" ", " ", " ", "#"},
                 {"#", "#", "#", "#"},
@@ -55,7 +55,7 @@ public class SevenSegmentDisplayTest {
 
     @Test
     public void sevenSegmentDisplay_threeTest() {
-        String[][] result = sevenSegmentDisplay.displayThree();
+        String[][] result = sevenSegmentDisplay.getThree();
         assertArrayEquals(new String[][]{{"#", "#", "#", "#"},
                 {" ", " ", " ", "#"},
                 {"#", "#", "#", "#"},
@@ -65,7 +65,7 @@ public class SevenSegmentDisplayTest {
 
     @Test
     public void sevenSegmentDisplay_fourTest() {
-        String[][] result = sevenSegmentDisplay.displayFour();
+        String[][] result = sevenSegmentDisplay.getFour();
         assertArrayEquals(new String[][]{{"#", " ", " ", "#"},
                 {"#", " ", " ", "#"},
                 {"#", "#", "#", "#"},
@@ -75,7 +75,7 @@ public class SevenSegmentDisplayTest {
 
     @Test
     public void sevenSegmentDisplay_fiveTest() {
-        String[][] result = sevenSegmentDisplay.displayFive();
+        String[][] result = sevenSegmentDisplay.getFive();
         assertArrayEquals(new String[][]{{"#", "#", "#", "#"},
                 {"#", " ", " ", " "},
                 {"#", "#", "#", "#"},
@@ -85,7 +85,7 @@ public class SevenSegmentDisplayTest {
 
     @Test
     public void sevenSegmentDisplay_sixTest() {
-        String[][] result = sevenSegmentDisplay.displaySix();
+        String[][] result = sevenSegmentDisplay.getSix();
         assertArrayEquals(new String[][]{{"#", "#", "#", "#"},
                 {"#", " ", " ", " "},
                 {"#", "#", "#", "#"},
@@ -95,7 +95,7 @@ public class SevenSegmentDisplayTest {
 
     @Test
     public void sevenSegmentDisplay_sevenTest() {
-        String[][] result = sevenSegmentDisplay.displaySeven();
+        String[][] result = sevenSegmentDisplay.getSeven();
         assertArrayEquals(new String[][]{{"#", "#", "#", "#"},
                 {" ", " ", " ", "#"},
                 {" ", " ", " ", "#"},
@@ -105,7 +105,7 @@ public class SevenSegmentDisplayTest {
 
     @Test
     public void sevenSegmentDisplay_eightTest() {
-        String[][] result = sevenSegmentDisplay.displayEight();
+        String[][] result = sevenSegmentDisplay.getEight();
         assertArrayEquals(new String[][]{{"#", "#", "#", "#"},
                 {"#", " ", " ", "#"},
                 {"#", "#", "#", "#"},
@@ -115,7 +115,7 @@ public class SevenSegmentDisplayTest {
 
     @Test
     public void sevenSegmentDisplay_nineTest() {
-        String[][] result = sevenSegmentDisplay.displayNine();
+        String[][] result = sevenSegmentDisplay.getNine();
         assertArrayEquals(new String[][]{{"#", "#", "#", "#"},
                 {"#", " ", " ", "#"},
                 {"#", "#", "#", "#"},
