@@ -2,222 +2,139 @@ package tddClass;
 
 public class SevenSegmentDisplay {
 
-    private  String[][] sevenSegmentArray = {{"#", "#", "#", "#"},
-                                             {"#", "#", "#", "#"},
-                                             {"#", "#", "#", "#"},
-                                             {"#", "#", "#", "#"},
-                                             {"#", "#", "#", "#"}};
+    private  String[][] sevenSegmentArray = {{" ", " ", " ", " "},
+                                             {" ", " ", " ", " "},
+                                             {" ", " ", " ", " "},
+                                             {" ", " ", " ", " "},
+                                             {" ", " ", " ", " "}};
 
-    public boolean turnOn(int pin) {
+    public String[][] turnOn(int pin) {
         if(pin == 1) {
-            for(int i = 0; i < 5; i++) {
-                for(int j = 0; j < 4; j++) {
-                    System.out.print(sevenSegmentArray[i][j] + " ");
+            for(int i = 0; i < sevenSegmentArray.length; i++) {
+                for(int j = 0; j < sevenSegmentArray[0].length; j++) {
+                    sevenSegmentArray[i][j] = "#";
                 }
                 System.out.println();
             }
         } else {
-            if(pin == 0) {
-                for(int i = 0; i < 5; i++) {
-                    for(int j = 0; j < 4; j++) {
-                        sevenSegmentArray[i][j] = " ";
-                        System.out.print(sevenSegmentArray[i][j] + " ");
-                    }
-                    System.out.println();
-                }
-            }
+            return sevenSegmentArray;
         }
-        return true;
+        return sevenSegmentArray;
     }
 
-    public String[][] getZero() {
-        sevenSegmentArray[1][1] = " ";
-        sevenSegmentArray[1][2] = " ";
-        sevenSegmentArray[2][1] = " ";
-        sevenSegmentArray[2][2] = " ";
-        sevenSegmentArray[3][1] = " ";
-        sevenSegmentArray[3][2] = " ";
+    public String[][] getA() {
+        for(int i = 0; i < sevenSegmentArray.length; i++) {
+            for(int j = 0; j < sevenSegmentArray[0].length; j++) {
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[0][0]) sevenSegmentArray[0][0] = "#";
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[0][1]) sevenSegmentArray[0][1] = "#";
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[0][2]) sevenSegmentArray[0][2] = "#";
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[0][3]) sevenSegmentArray[0][3] = "#";
+            }
+            System.out.println();
+        }
 
         return sevenSegmentArray;
     }
 
-    public String[][] getOne() {
-        sevenSegmentArray[0][0] = " ";
-        sevenSegmentArray[0][1] = " ";
-        sevenSegmentArray[0][2] = " ";
-        sevenSegmentArray[1][0] = " ";
-        sevenSegmentArray[1][1] = " ";
-        sevenSegmentArray[1][2] = " ";
-        sevenSegmentArray[2][0] = " ";
-        sevenSegmentArray[2][1] = " ";
-        sevenSegmentArray[2][2] = " ";
-        sevenSegmentArray[3][0] = " ";
-        sevenSegmentArray[3][1] = " ";
-        sevenSegmentArray[3][2] = " ";
-        sevenSegmentArray[4][0] = " ";
-        sevenSegmentArray[4][1] = " ";
-        sevenSegmentArray[4][2] = " ";
+    public String[][] getB() {
+        for(int i = 0; i < sevenSegmentArray.length; i++) {
+            for(int j = 0; j < sevenSegmentArray[0].length; j++) {
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[0][3]) sevenSegmentArray[0][3] = "#";
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[1][3]) sevenSegmentArray[1][3] = "#";
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[2][3]) sevenSegmentArray[2][3] = "#";
+            }
+            System.out.println();
+        }
 
         return sevenSegmentArray;
     }
 
-    public String[][] getTwo() {
-        sevenSegmentArray[1][0] = " ";
-        sevenSegmentArray[1][1] = " ";
-        sevenSegmentArray[1][2] = " ";
-        sevenSegmentArray[3][1] = " ";
-        sevenSegmentArray[3][2] = " ";
-        sevenSegmentArray[3][3] = " ";
+    public String[][] getC() {
+        for(int i = 0; i < sevenSegmentArray.length; i++) {
+            for(int j = 0; j < sevenSegmentArray[0].length; j++) {
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[2][3]) sevenSegmentArray[2][3] = "#";
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[3][3]) sevenSegmentArray[3][3] = "#";
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[4][3]) sevenSegmentArray[4][3] = "#";
+            }
+            System.out.println();
+        }
 
         return sevenSegmentArray;
     }
 
-    public String[][] getThree() {
-        sevenSegmentArray[1][0] = " ";
-        sevenSegmentArray[1][1] = " ";
-        sevenSegmentArray[1][2] = " ";
-        sevenSegmentArray[3][0] = " ";
-        sevenSegmentArray[3][1] = " ";
-        sevenSegmentArray[3][2] = " ";
+    public String[][] getD() {
+        for(int i = 0; i < sevenSegmentArray.length; i++) {
+            for(int j = 0; j < sevenSegmentArray[0].length; j++) {
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[4][0]) sevenSegmentArray[4][0] = "#";
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[4][1]) sevenSegmentArray[4][1] = "#";
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[4][2]) sevenSegmentArray[4][2] = "#";
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[4][3]) sevenSegmentArray[4][3] = "#";
+            }
+            System.out.println();
+        }
 
         return sevenSegmentArray;
     }
 
-    public String[][] getFour() {
-        sevenSegmentArray[0][1] = " ";
-        sevenSegmentArray[0][2] = " ";
-        sevenSegmentArray[1][1] = " ";
-        sevenSegmentArray[1][2] = " ";
-        sevenSegmentArray[3][0] = " ";
-        sevenSegmentArray[3][1] = " ";
-        sevenSegmentArray[3][2] = " ";
-        sevenSegmentArray[4][0] = " ";
-        sevenSegmentArray[4][1] = " ";
-        sevenSegmentArray[4][2] = " ";
+    public String[][] getE() {
+        for(int i = 0; i < sevenSegmentArray.length; i++) {
+            for(int j = 0; j < sevenSegmentArray[0].length; j++) {
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[2][0]) sevenSegmentArray[2][0] = "#";
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[3][0]) sevenSegmentArray[3][0] = "#";
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[4][0]) sevenSegmentArray[4][0] = "#";
+            }
+            System.out.println();
+        }
 
         return sevenSegmentArray;
     }
 
-    public String[][] getFive() {
-        sevenSegmentArray[1][1] = " ";
-        sevenSegmentArray[1][2] = " ";
-        sevenSegmentArray[1][3] = " ";
-        sevenSegmentArray[3][0] = " ";
-        sevenSegmentArray[3][1] = " ";
-        sevenSegmentArray[3][2] = " ";
+    public String[][] getF() {
+        for(int i = 0; i < sevenSegmentArray.length; i++) {
+            for(int j = 0; j < sevenSegmentArray[0].length; j++) {
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[0][0]) sevenSegmentArray[0][0] = "#";
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[1][0]) sevenSegmentArray[1][0] = "#";
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[2][0]) sevenSegmentArray[2][0] = "#";
+            }
+            System.out.println();
+        }
 
         return sevenSegmentArray;
     }
 
-    public String[][] getSix() {
-        sevenSegmentArray[1][1] = " ";
-        sevenSegmentArray[1][2] = " ";
-        sevenSegmentArray[1][3] = " ";
-        sevenSegmentArray[3][1] = " ";
-        sevenSegmentArray[3][2] = " ";
-
-        return sevenSegmentArray;
-    }
-
-    public String[][] getSeven() {
-        sevenSegmentArray[1][0] = " ";
-        sevenSegmentArray[1][1] = " ";
-        sevenSegmentArray[1][2] = " ";
-        sevenSegmentArray[2][0] = " ";
-        sevenSegmentArray[2][1] = " ";
-        sevenSegmentArray[2][2] = " ";
-        sevenSegmentArray[3][0] = " ";
-        sevenSegmentArray[3][1] = " ";
-        sevenSegmentArray[3][2] = " ";
-        sevenSegmentArray[4][0] = " ";
-        sevenSegmentArray[4][1] = " ";
-        sevenSegmentArray[4][2] = " ";
-
-        return sevenSegmentArray;
-    }
-
-    public String[][] getEight() {
-        sevenSegmentArray[1][1] = " ";
-        sevenSegmentArray[1][2] = " ";
-        sevenSegmentArray[3][1] = " ";
-        sevenSegmentArray[3][2] = " ";
-
-        return sevenSegmentArray;
-    }
-
-    public String[][] getNine() {
-        sevenSegmentArray[1][1] = " ";
-        sevenSegmentArray[1][2] = " ";
-        sevenSegmentArray[3][0] = " ";
-        sevenSegmentArray[3][1] = " ";
-        sevenSegmentArray[3][2] = " ";
+    public String[][] getG() {
+        for(int i = 0; i < sevenSegmentArray.length; i++) {
+            for(int j = 0; j < sevenSegmentArray[0].length; j++) {
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[2][0]) sevenSegmentArray[2][0] = "#";
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[2][1]) sevenSegmentArray[2][1] = "#";
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[2][2]) sevenSegmentArray[2][2] = "#";
+                if(sevenSegmentArray[i][j] == sevenSegmentArray[2][3]) sevenSegmentArray[2][3] = "#";
+            }
+            System.out.println();
+        }
 
         return sevenSegmentArray;
     }
 
     public void setScreen(String pins) {
-        for(int i = 0; i < pins.length(); i++) {
-            if(pins == "11111101") {
-                getZero();
-                break;
-            } else {
-                if(pins == "01100001") {
-                    getOne();
-                    break;
-                } else {
-                    if(pins == "11011011") {
-                        getTwo();
-                        break;
-                    } else {
-                        if(pins == "11110011") {
-                            getThree();
-                            break;
-                        } else {
-                            if(pins == "01100111") {
-                                getFour();
-                                break;
-                            } else {
-                                if(pins == "10110111") {
-                                    getFive();
-                                    break;
-                                } else {
-                                    if(pins == "10111111") {
-                                        getSix();
-                                        break;
-                                    } else {
-                                        if(pins == "11100001") {
-                                            getSeven();
-                                            break;
-                                        } else {
-                                            if(pins == "11111111") {
-                                                getEight();
-                                                break;
-                                            } else {
-                                                if(pins == "11110111") {
-                                                    getNine();
-                                                    break;
-                                                } else {
-                                                    turnOn(0);
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        turnOn(0);
+        if(pins.charAt(7) == '1') {
+            if(pins.charAt(0) == '1') getA();
+            if(pins.charAt(1) == '1') getB();
+            if(pins.charAt(2) == '1') getC();
+            if(pins.charAt(3) == '1') getD();
+            if(pins.charAt(4) == '1') getE();
+            if(pins.charAt(5) == '1') getF();
+            if(pins.charAt(6) == '1') getG();
         }
     }
 
-    public String[][] display() {
-        for(int i = 0; i < 5; i++) {
-            for(int j = 0; j < 4; j++) {
+    public void display() {
+        for(int i = 0; i < sevenSegmentArray.length; i++) {
+            for(int j = 0; j < sevenSegmentArray[0].length; j++) {
                 System.out.print(sevenSegmentArray[i][j] + " ");
             }
             System.out.println();
         }
-        return sevenSegmentArray;
     }
 }

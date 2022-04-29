@@ -3,6 +3,8 @@ package tddClass;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import javax.print.attribute.standard.PresentationDirection;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class SevenSegmentDisplayTest {
@@ -20,106 +22,86 @@ public class SevenSegmentDisplayTest {
 
     @Test
     public void sevenSegmentDisplaySwitchTest() {
-        assertTrue(sevenSegmentDisplay.turnOn(1));
-    }
-
-    @Test
-    public void sevenSegmentDisplay_zeroTest() {
-        String[][] result = sevenSegmentDisplay.getZero();
+        String[][] result = sevenSegmentDisplay.turnOn(1);
         assertArrayEquals(new String[][]{{"#", "#", "#", "#"},
-                {"#", " ", " ", "#"},
-                {"#", " ", " ", "#"},
-                {"#", " ", " ", "#"},
+                {"#", "#", "#", "#"},
+                {"#", "#", "#", "#"},
+                {"#", "#", "#", "#"},
                 {"#", "#", "#", "#"}}, result);
     }
 
     @Test
-    public void sevenSegmentDisplay_oneTest() {
-        String[][] result = sevenSegmentDisplay.getOne();
+    public void sevenSegmentDisplay_aTest() {
+        String[][] result = sevenSegmentDisplay.getA();
+        assertArrayEquals(new String[][]{{"#", "#", "#", "#"},
+                {" ", " ", " ", " "},
+                {" ", " ", " ", " "},
+                {" ", " ", " ", " "},
+                {" ", " ", " ", " "}}, result);
+    }
+
+    @Test
+    public void sevenSegmentDisplay_bTest() {
+        String[][] result = sevenSegmentDisplay.getB();
         assertArrayEquals(new String[][]{{" ", " ", " ", "#"},
                 {" ", " ", " ", "#"},
                 {" ", " ", " ", "#"},
-                {" ", " ", " ", "#"},
-                {" ", " ", " ", "#"}}, result);
+                {" ", " ", " ", " "},
+                {" ", " ", " ", " "}}, result);
     }
 
     @Test
-    public void sevenSegmentDisplay_twoTest() {
-        String[][] result = sevenSegmentDisplay.getTwo();
-        assertArrayEquals(new String[][]{{"#", "#", "#", "#"},
-                {" ", " ", " ", "#"},
-                {"#", "#", "#", "#"},
-                {"#", " ", " ", " "},
-                {"#", "#", "#", "#"}}, result);
-    }
-
-    @Test
-    public void sevenSegmentDisplay_threeTest() {
-        String[][] result = sevenSegmentDisplay.getThree();
-        assertArrayEquals(new String[][]{{"#", "#", "#", "#"},
-                {" ", " ", " ", "#"},
-                {"#", "#", "#", "#"},
-                {" ", " ", " ", "#"},
-                {"#", "#", "#", "#"}}, result);
-    }
-
-    @Test
-    public void sevenSegmentDisplay_fourTest() {
-        String[][] result = sevenSegmentDisplay.getFour();
-        assertArrayEquals(new String[][]{{"#", " ", " ", "#"},
-                {"#", " ", " ", "#"},
-                {"#", "#", "#", "#"},
-                {" ", " ", " ", "#"},
-                {" ", " ", " ", "#"}}, result);
-    }
-
-    @Test
-    public void sevenSegmentDisplay_fiveTest() {
-        String[][] result = sevenSegmentDisplay.getFive();
-        assertArrayEquals(new String[][]{{"#", "#", "#", "#"},
-                {"#", " ", " ", " "},
-                {"#", "#", "#", "#"},
-                {" ", " ", " ", "#"},
-                {"#", "#", "#", "#"}}, result);
-    }
-
-    @Test
-    public void sevenSegmentDisplay_sixTest() {
-        String[][] result = sevenSegmentDisplay.getSix();
-        assertArrayEquals(new String[][]{{"#", "#", "#", "#"},
-                {"#", " ", " ", " "},
-                {"#", "#", "#", "#"},
-                {"#", " ", " ", "#"},
-                {"#", "#", "#", "#"}}, result);
-    }
-
-    @Test
-    public void sevenSegmentDisplay_sevenTest() {
-        String[][] result = sevenSegmentDisplay.getSeven();
-        assertArrayEquals(new String[][]{{"#", "#", "#", "#"},
-                {" ", " ", " ", "#"},
+    public void sevenSegmentDisplay_cTest() {
+        String[][] result = sevenSegmentDisplay.getC();
+        assertArrayEquals(new String[][]{{" ", " ", " ", " "},
+                {" ", " ", " ", " "},
                 {" ", " ", " ", "#"},
                 {" ", " ", " ", "#"},
                 {" ", " ", " ", "#"}}, result);
     }
 
     @Test
-    public void sevenSegmentDisplay_eightTest() {
-        String[][] result = sevenSegmentDisplay.getEight();
-        assertArrayEquals(new String[][]{{"#", "#", "#", "#"},
-                {"#", " ", " ", "#"},
-                {"#", "#", "#", "#"},
-                {"#", " ", " ", "#"},
+    public void sevenSegmentDisplay_dTest() {
+        String[][] result = sevenSegmentDisplay.getD();
+        assertArrayEquals(new String[][]{{" ", " ", " ", " "},
+                {" ", " ", " ", " "},
+                {" ", " ", " ", " "},
+                {" ", " ", " ", " "},
                 {"#", "#", "#", "#"}}, result);
     }
 
     @Test
-    public void sevenSegmentDisplay_nineTest() {
-        String[][] result = sevenSegmentDisplay.getNine();
-        assertArrayEquals(new String[][]{{"#", "#", "#", "#"},
-                {"#", " ", " ", "#"},
-                {"#", "#", "#", "#"},
-                {" ", " ", " ", "#"},
-                {"#", "#", "#", "#"}}, result);
+    public void sevenSegmentDisplay_eTest() {
+        String[][] result = sevenSegmentDisplay.getE();
+        assertArrayEquals(new String[][]{{" ", " ", " ", " "},
+                {" ", " ", " ", " "},
+                {"#", " ", " ", " "},
+                {"#", " ", " ", " "},
+                {"#", " ", " ", " "}}, result);
     }
+
+    @Test
+    public void sevenSegmentDisplay_fTest() {
+        String[][] result = sevenSegmentDisplay.getF();
+        assertArrayEquals(new String[][]{{"#", " ", " ", " "},
+                {"#", " ", " ", " "},
+                {"#", " ", " ", " "},
+                {" ", " ", " ", " "},
+                {" ", " ", " ", " "}}, result);
+    }
+
+    @Test
+    public void sevenSegmentDisplay_gTest() {
+        String[][] result = sevenSegmentDisplay.getG();
+        assertArrayEquals(new String[][]{{" ", " ", " ", " "},
+                {" ", " ", " ", " "},
+                {"#", "#", "#", "#"},
+                {" ", " ", " ", " "},
+                {" ", " ", " ", " "}}, result);
+    }
+
+//    @Test
+//    public void validateSevenSegmentDisplayWith_characterOne() {
+//        String[][] result = sevenSegmentDisplay.setScreen("11110111");
+//    }
 }
